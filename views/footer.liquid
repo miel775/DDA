@@ -1,8 +1,17 @@
-<div>
-    {% comment %} laatste nieuws {% endcomment %}
-</div>
+<section>
+    <h3>Laatste Nieuws</h3>
+    {% for publication in datedpublications %}
+    <article>
+        <img src=" {{ publication.photo }} " width="100px">
+        <p> {{ publication.topic }} </p>
+        <p> {{ publication.date }} </p>
 
-<div class="column column--span-mobile-12 column--span-tablet-12 column--span-desktop-5">
+        <p> {{ publication.title }} </p>
+    {% endfor %}
+    </article>
+</section>
+
+<section class="column column--span-mobile-12 column--span-tablet-12 column--span-desktop-5">
     <a rel="home" href="/nl/" aria-label="Ga naar Dutch Digital Agencies home page" class="footer__logo-link link">
         <img 
             src="/_astro/logo.CO-nlMzN.svg" 
@@ -12,7 +21,7 @@
             class="footer__logo" 
         >
     </a>
-</div>
+</section>
 
 <div class="footer__bottom column column--span-mobile-12 column--span-tablet-12 column--span-desktop-12">
     <ul class="footer__socials">

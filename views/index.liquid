@@ -1,4 +1,4 @@
-{% render 'views/head.liquid', title: 'DDA Publicaties' %}
+{% include 'views/head.liquid', title: 'DDA Publicaties' %}
 
     <section>
     <h1> Publications </h1>
@@ -38,13 +38,12 @@
     </section>
 
     <section>
+        {% for publication in publications %}
         <article>
-            {% comment %} img van de blog {% endcomment %}
+            <img src=" {{  publication.photo }} " width="100px">
+            <p> {{ publication.title }} </p>
+        {% endfor %}
         </article>
     </section>
 
-    {% for publication in publications %}
-        <p>{{ publication.content }}</p>
-      {% endfor %}
-
-{% render 'views/footer.liquid' %}
+{% include 'views/footer.liquid' %}

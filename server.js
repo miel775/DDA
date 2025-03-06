@@ -4,9 +4,6 @@ import express from 'express'
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
-
-
-console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // Doe een fetch naar de data die je nodig hebt
 // const apiResponse = await fetch('...')
 
@@ -34,12 +31,15 @@ app.engine('liquid', engine.express());
 app.set('views', './views')
 
 app.get('/', async function (request, response) {
-
   const allPublications = await fetch('https://fdnd-agency.directus.app/items/dda_publications');
+  const datedPublications = await fetch('https://fdnd-agency.directus.app/items/dda_publications/?sort=-date');
+
+  const datedPublicationsJSON = await datedPublications.json();
   const allPublicationsJSON = await allPublications.json();
 
   response.render('index.liquid', {
-    publications: allPublicationsJSON.data
+    publications: allPublicationsJSON.data,
+    datedpublications: datedPublicationsJSON.data
   })
 })
 
