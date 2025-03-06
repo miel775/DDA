@@ -1,4 +1,50 @@
 {% render 'views/head.liquid', title: 'DDA Publicaties' %}
 
+    <section>
+    <h1> Publications </h1>
+        <p>Om er voor te zorgen dat ook jij op de hoogte blijft van het laatste nieuws en interessante opinies met betrekking tot onze branche en digitale innovaties, delen we hier alle content die we of zelf hebben gecreëerd, bijvoorbeeld met input van onze leden, of verkregen hebben via één van onze partners.</p>
+    </section>
+
+    <section>
+        <form class="list-form">
+            <div class="list-form__search">
+                <div data-headlessui-state="" class="text-field">
+                    <label id="headlessui-label-P0-1" for="headlessui-control-P0-0" data-headlessui-state="" class="text-field__label text-field__label--float">Zoek een publicatie...</label>
+                <input type="search" name="zoek" placeholder="" value="" id="headlessui-control-P0-0" data-headlessui-state="" class="text-field__input" aria-labelledby="headlessui-label-P0-1">
+                <span hidden="" style="position:fixed;top:1px;left:1px;width:1px;height:0px;padding:0px;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none;"></span>
+                </div>
+            </div>
+            
+            <div class="list-form__filters">
+                <div data-headlessui-state="">
+                    <label id="headlessui-label-P0-4" for="headlessui-control-P0-3" data-headlessui-state="" class="a11y-sr-only">Onderwerp</label>
+                    <button id="headlessui-control-P0-3" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="" class="select-button" aria-labelledby="headlessui-label-P0-4 headlessui-control-P0-3">
+                        <div class="select-button__label">Onderwerp</div>
+                        <span class="select-button__icon ">
+                            <svg role="presentation" data-icon="plus" class="icon select-button__icon--open">
+                                <use href="#plus" xlink:href="#plus"></use>
+                            </svg>
+                            <svg role="presentation" data-icon="minus" class="icon select-button__icon--close">
+                                <use href="#minus" xlink:href="#minus"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <span hidden="" style="position:fixed;top:1px;left:1px;width:1px;height:0px;padding:0px;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none;">
+                        <input type="hidden" hidden="" readonly="" style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;">
+                        <input type="hidden" hidden="" readonly="" name="tag" style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"></span>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <article>
+            {% comment %} img van de blog {% endcomment %}
+        </article>
+    </section>
+
+    {% for publication in publications %}
+        <p>{{ publication.content }}</p>
+      {% endfor %}
 
 {% render 'views/footer.liquid' %}
