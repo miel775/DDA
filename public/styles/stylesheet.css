@@ -1,5 +1,35 @@
 :root{
 
+/* fonts desktop */
+--desktop-h1: 96px;
+--desktop-h2: 64px;
+--desktop-h3: 48px;
+--desktop-h4: 32px;
+--desktop-h5: 24px;
+--desktop-h6: 24px;
+--desktop-p: 18px;
+--desktop-subtext: 16px;
+
+/* fonts tablet */
+--tablet-h1: 72px;
+--tablet-h2: 48px;
+--tablet-h3: 36px;
+--tablet-h4: 28px;
+--tablet-h5: 22px;
+--tablet-h6: 20px;
+--tablet-p: 16px;
+--tablet-subtext: 16px;
+
+/* fonts mobile */
+--tablet-h1: 48px;
+--tablet-h2: 40px;
+--tablet-h3: 32px;
+--tablet-h4: 24px;
+--tablet-h5: 18px;
+--tablet-h6: 18px;
+--tablet-p: 16px;
+--tablet-subtext: 14px;
+
 /* spacing */
 --spacing-8: 8px;
 --spacing-12: 12px;
@@ -24,4 +54,10 @@
 --color-white: #ffffff;
 --color-blue: #364bf7;
 --color-yellow: #f7e19f;
+
+/* grid templates */
+--grand-grid-colums: 1fr, repeat(12, 1fr), 1fr;
+--grid-columns: 64px, repeat(12, 1fr), 64px;
+--small-grid-columns: 16px, repeat(4, 1fr), 16px;
+--grand-grid-gap: 32px;
 }
