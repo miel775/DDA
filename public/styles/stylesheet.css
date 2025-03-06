@@ -21,14 +21,14 @@
 --tablet-subtext: 16px;
 
 /* fonts mobile */
---tablet-h1: 48px;
---tablet-h2: 40px;
---tablet-h3: 32px;
---tablet-h4: 24px;
---tablet-h5: 18px;
---tablet-h6: 18px;
---tablet-p: 16px;
---tablet-subtext: 14px;
+--mobile-h1: 48px;
+--mobile-h2: 40px;
+--mobile-h3: 32px;
+--mobile-h4: 24px;
+--mobile-h5: 18px;
+--mobile-h6: 18px;
+--mobile-p: 16px;
+--mobile-subtext: 14px;
 
 /* spacing */
 --spacing-8: 8px;
@@ -61,3 +61,102 @@
 --small-grid-columns: 16px, repeat(4, 1fr), 16px;
 --grand-grid-gap: 32px;
 }
+
+.archivo-semi-bold {
+    font-family: "Archivo-semi-bold", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -4%;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.archivo-regular {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -4%;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.martian-mono {
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    letter-spacing: 0%;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Archivo-semi-bold", sans-serif;
+    font-size: var(--desktop-h1);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-h1);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-h1);
+    }
+}
+
+h2 {
+    font-family: "Archivo-semi-bold", sans-serif;
+    font-size: var(--desktop-h2);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-h2);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-h2);
+    }
+}
+
+h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: var(--desktop-h3);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-h3);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-h3);
+    }
+}
+
+h4 {
+    font-family: "Archivo", sans-serif;
+    font-size: var(--desktop-h4);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-h4);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-h4);
+    }
+}
+
+p {
+    font-family: "Archivo-semi-bold", sans-serif;
+    font-size: var(--desktop-p);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-p);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-p);
+    }
+}
+
+.subtext {
+    font-family: "Martian Mono", monospace;
+    font-size: var(--desktop-subtext);
+
+    @media (max-width:1200px) {
+        font-size: var(--tablet-subtext);
+    }
+    @media (max-width:530px) {
+        font-size: var(--mobile-subtext);
+    }
+}
+  
