@@ -213,11 +213,15 @@ header {
         flex-direction: row;
         align-items: center;
         gap: var(--spacing-32);
-            button {
+            a {
                 background-color: var(--color-white);
                 border: var(--color-black) 2px solid;
                 width: var(--spacing-64);
                 height: var(--spacing-64);
+
+                svg {
+                    scale: 0.5;
+                }
 
                 &:hover{
                     background-color: var(--color-blue);
@@ -235,6 +239,7 @@ header {
         font-family: var(--font-family-regular);
         display:flex;
         justify-content: center;
+        text-transform: uppercase;
     }
 
     p {
@@ -277,7 +282,6 @@ header {
     article {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        overflow: scroll;
     }
 
     img {
@@ -288,6 +292,13 @@ header {
 
     h2 {
         display: none;
+    }
+}
+
+
+.laatste-nieuws {
+    h2 {
+        text-transform: uppercase;
     }
 }
   

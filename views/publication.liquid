@@ -24,12 +24,12 @@
 
         <div class="gridview">
         {% for publication in publications %}
-            <a href="/publication/{{ publication.id }}">
+            <article>
                 {% comment %} deze foto's werken nog niet {% endcomment %}
-                <img src="https://fdnd-agency.directus.app/assets/{{ publication.photo }}"  width="100px">
+                <img src=" {{  publication.photo }} " width="100px">
                 <h2> {{ publication.title }} </h2>
         {% endfor %}
-            </a>
+            </article>
         </div>
     </section>
 

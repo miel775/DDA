@@ -43,6 +43,18 @@ app.get('/', async function (request, response) {
   })
 })
 
+
+
+// ik wil een pagina per publicatie
+app.get('/publication/:id', async function (request, response) {       
+  const publicationz = request.params.id;                              
+  const publicationFetch = await fetch(`https://fdnd-agency.directus.app/items/dda_publications/?fields=*.*&filter={"id":"${publicationz}"}&limit=1`)
+  const publicationFetchJSON = await publicationFetch.json()
+ 
+  response.render('publication.liquid', {publicationz: publicationFetchJSON.data?.[0] || [] })
+})
+ 
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
