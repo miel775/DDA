@@ -1,14 +1,17 @@
-<section class="laatste-niews">
+<section class="laatste-nieuws">
     <h2>Laatste Nieuws</h2>
-    {% for publication in datedpublications %}
-    <article>
-        <img src=" {{ publication.photo }} " width="100px">
-        <p> {{ publication.topic }} </p>
-        <p> {{ publication.date }} </p>
 
-        <p> {{ publication.title }} </p>
-    {% endfor %}
-    </article>
+    <div class="container">
+        {% for publication in datedpublications %}
+        <a>
+            <img src=" {{ publication.photo }} " width="100px">
+            <p> {{ publication.topic }} </p>
+            <p> {{ publication.date }} </p>
+
+            <p> {{ publication.title }} </p>
+        {% endfor %}
+        </a>
+    </div>
 
     <p>Alle Publicaties</p>
 </section>

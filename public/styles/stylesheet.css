@@ -297,9 +297,24 @@ header {
 
 
 .laatste-nieuws {
+    border-left: var(--color-black) 2px solid;
+    border-right: var(--color-black) 2px solid;
+    
     h2 {
+        display: flex;
+        justify-content: center;
         text-transform: uppercase;
     }
+
+    a {
+        border: var(--color-black) 2px solid;
+        padding: 1em;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
   
 

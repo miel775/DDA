@@ -32,7 +32,7 @@ app.set('views', './views')
 
 app.get('/', async function (request, response) {
   const allPublications = await fetch('https://fdnd-agency.directus.app/items/dda_publications');
-  const datedPublications = await fetch('https://fdnd-agency.directus.app/items/dda_publications/?sort=-date');
+  const datedPublications = await fetch('https://fdnd-agency.directus.app/items/dda_publications/?sort=-date&limit=3');
 
   const datedPublicationsJSON = await datedPublications.json();
   const allPublicationsJSON = await allPublications.json();
