@@ -53,6 +53,10 @@ app.get('/publication/:id', async function (request, response) {
  
   response.render('publication.liquid', {publicationz: publicationFetchJSON.data?.[0] || [] })
 })
+
+app.get('port', async function (request, response) {
+  res.send('hello world')
+})
  
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen

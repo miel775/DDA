@@ -264,6 +264,11 @@ header {
         border-bottom: var(--color-black) 2px solid;
         display: flex;
         align-items: center;
+
+        div:nth-of-type(2) {
+            display: flex;
+            justify-content: end;
+        }
     }
 }
 
@@ -294,6 +299,7 @@ header {
         border: var(--color-black) 2px solid;
         width: 328px;
         height: 512px;
+        object-fit: cover;
     }
 
     h2 {
@@ -340,14 +346,13 @@ header {
         border: var(--border);
         padding-left: 0.5em;
         padding-right: 0.5em;
+        font: var(--font-family-mono);
     }
 }
   
 
 .foto-parade {
     display: flex;
-
-
     
     article {
         width: 8em;
@@ -396,8 +401,6 @@ footer {
             margin-top: -1em;
             font-family: var(--font-family-mono);
         }
-
-        
     }
 }
 
