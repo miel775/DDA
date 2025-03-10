@@ -54,10 +54,14 @@ app.get('/publication/:id', async function (request, response) {
   response.render('publication.liquid', {publicationz: publicationFetchJSON.data?.[0] || [] })
 })
 
-app.get('port', async function (request, response) {
-  res.send('hello world')
+app.get('/hello-world', async function (request, response) {
+  response.send('hello world')
 })
- 
+
+app.use((req, res, next) => {
+  res.status(404).send("Sorry can't find that!")
+})
+
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt

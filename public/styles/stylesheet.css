@@ -352,7 +352,24 @@ header {
   
 
 .foto-parade {
-    display: flex;
+    height: 8em;
+    object-fit: cover;
+    border: var(--border);
+
+    .picture-container-2 {
+        position: relative;
+        right: 99em;
+        top: -8.3em;
+    }
+
+
+    div { 
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    animation: display 20s infinite;
+    
     
     article {
         width: 8em;
@@ -362,6 +379,7 @@ header {
         align-items: center;
         justify-content: center;
     }
+}
 }
 
 footer {
@@ -429,5 +447,15 @@ footer {
         scale: 1.8;
         border: var(--color-black) 0.5px solid;
         opacity: 0;
+    }
+}
+
+@keyframes display {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(70em);
     }
 }
