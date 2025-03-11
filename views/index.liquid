@@ -24,6 +24,8 @@
         </form>
 
         <div class="gridview">
+
+            <div class="publicaties-1">
         {% for publication in publications %}
             <a href="/publication/{{ publication.id }}">
                 {% comment %} deze foto's werken nog niet {% endcomment %}
@@ -31,6 +33,17 @@
                 <h2> {{ publication.title }} </h2>
         {% endfor %}
             </a>
+            </div>
+            
+            <div class="publicaties-2">
+                {% for publication in publications %}
+                    <a href="/publication/{{ publication.id }}">
+                        {% comment %} deze foto's werken nog niet {% endcomment %}
+                        <img src="https://fdnd-agency.directus.app/assets/{{ publication.photo }}"  width="100px">
+                        <h2> {{ publication.title }} </h2>
+                {% endfor %}
+                    </a>
+                    </div>
         </div>
     </section>
 

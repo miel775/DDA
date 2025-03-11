@@ -56,7 +56,7 @@
 --color-yellow: #f7e19f;
 
 /* border */
---border: 2px #222226 solid;
+--border: 1px #222226 solid;
 
 
 /* grid templates */
@@ -166,7 +166,17 @@ p {
     }
 }
 
-/* de general font werkt niet */
+nav {
+    font-family: var(--font-family-mono);
+}
+
+.active {
+    color: var(--color-blue);
+}
+
+.bold {
+    font-weight: 1000;
+}
 
 
 /* keyframes */
