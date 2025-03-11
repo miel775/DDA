@@ -159,6 +159,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
 /* footer */
 
 .get-updated {
@@ -198,41 +199,14 @@ header {
         font: var(--font-family-mono);
     }
 }
-  
 
 .foto-parade {
-    display: none;
     height: 8em;
-    
     border-left: var(--border);
     border-right: var(--border);
-
-    .picture-container-2 {
-        position: relative;
-        right: 99em;
-        top: -8.3em;
-        object-fit: cover;
-    }
-
-
-    div { 
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    position: relative;
-    animation: display 20s infinite;
-    
-    article {
-        width: 8em;
-        height: 8em;
-        border: var(--border);
-        background-color: var(--color-white);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
-}
+  
+
 
 footer {
     display: grid;

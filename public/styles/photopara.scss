@@ -1,0 +1,42 @@
+$n: 23;
+$w: 200px;
+$g: .2;
+
+.picture-container {
+    --d: 10s;
+
+    display: grid;
+    grid-template-columns: repeat(8, 8em);
+    gap: $g * $w;  
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+
+    img {
+        height: 8em;
+        padding: 3em;
+        border: var(--border);
+    }
+}
+
+.gallery > img {
+    grid-area: 1/1;
+    width: 100%;
+    animation: display var(--d) linear infinite;
+    object-fit: cover;
+    aspect-ratio: 1.2;
+}
+
+@for $i from 2 through $n {  
+    .picture-container > img:nth-child(#{$i}) {
+        animation-delay: calc(#{(1 - $i) / $n} * var(--d));
+    }
+}
+
+@keyframes display {
+    #{100 / $n}% {
+        transform: translateX(-100%);
+    }
+    #{(100 / $n) + 0.01}% {
+        transform: translateX(#{$n - 1} * 100%);
+    }
+}
