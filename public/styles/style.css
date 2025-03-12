@@ -194,6 +194,8 @@ body {
     position: absolute;
     left: 12em;
     overflow: hidden;
+    animation-play-state: running; 
+
     article {
         
     }
@@ -203,10 +205,24 @@ body {
         width: 16em;
         height: 16em;
         object-fit: cover;
+
+        &:hover {
+            animation: scaling 1s linear forwards;
+        }
+
+        &:hover ~ .hover {
+            display: block;
+        }
     }
-    
+
     h2 {
         display: none;
+        position: relative;
+        font-size: 15px;
+        background-color: var(--color-white);
+        color: var(--color-blue);
+        top: -156px;
+        margin: 2em;
     }
 }
 
@@ -245,12 +261,26 @@ body {
             width: 8em;
             height: 8em;
         }
-    }
-    
-    h2 {
-        display: none;
+
+        &:hover ~ .hover {
+            display: block;
+        }
     }
 
+    h2 {
+        display: none;
+        position: relative;
+        font-size: 15px;
+        background-color: var(--color-white);
+        color: var(--color-blue);
+        top: -156px;
+        margin: 2em;
+    }
+}
+
+.hover-text {
+    display: block;
+    position: re;
 }
 
 
@@ -323,6 +353,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
+    animation-play-state: running; 
 }
 
 .picture-container-1 {
@@ -427,5 +458,15 @@ footer {
 
     100% {
         transform: translate(50%);
+    }
+}
+
+@keyframes scaling {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.2;
     }
 }
