@@ -41,6 +41,10 @@ app.get('/', async function (request, response) {
     publications: allPublicationsJSON.data,
     datedpublications: datedPublicationsJSON.data
   })
+
+  response.render('publications.liquid', {
+    publications: allPublicationsJSON.data,
+  })
 })
 
 

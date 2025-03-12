@@ -54,10 +54,14 @@ body {
     .login {
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-top: 2em;
 
         a {
             border: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
         }
     }
@@ -153,8 +157,9 @@ body {
     }
 }
 
-.form-filters {
-    margin-left: 10em;
+.list-form {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .textfield {
@@ -170,6 +175,10 @@ body {
     padding: var(--spacing-4);
     display: flex;
     justify-content: flex-end;
+
+    select {
+        margin-left: -15em;
+}
 }
 
 .gridview {
@@ -180,9 +189,11 @@ body {
 }
 
 .publicaties-1 {
-    position: relative;
     display: flex;
     animation: parade 15s linear infinite;
+    position: absolute;
+    left: 12em;
+    overflow: hidden;
     article {
         
     }
@@ -201,9 +212,21 @@ body {
 
 
 .publicaties-2 {
-    position: relative;
     display: flex;
     animation: parade-reversed 15s linear infinite;
+    position: absolute;
+    top: 49.3em;
+    left: -25em;
+    overflow: hidden;
+
+            
+    @media (max-width: 1260px) {
+        top: 50.7em;
+    }
+
+    @media (max-width: 1200px) {
+        top: 50.7em;
+    }
     
 
     article {
@@ -216,7 +239,12 @@ body {
         border: var(--border);
         width: 16em;
         height: 16em;
-        object-fit: cover;
+        object-fit: cover;'
+        
+        media (max-width: 1000px) {
+            width: 8em;
+            height: 8em;
+        }
     }
     
     h2 {
@@ -388,7 +416,7 @@ footer {
     }
 
     100% {
-        transform: translate(-100%);
+        transform: translate(-50%);
     }
 }
 
@@ -398,6 +426,6 @@ footer {
     }
 
     100% {
-        transform: translate(100%);
+        transform: translate(50%);
     }
 }

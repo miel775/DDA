@@ -1,36 +1,12 @@
 {% include 'views/head.liquid', title: 'DDA Publicaties' %}
 
     <section class="publications">
-    <h1> Publications </h1>
+    <h1> {{ publication.title  }} </h1>
         <p>Om er voor te zorgen dat ook jij op de hoogte blijft van het laatste nieuws en interessante opinies met betrekking tot onze branche en digitale innovaties, delen we hier alle content die we of zelf hebben gecreëerd, bijvoorbeeld met input van onze leden, of verkregen hebben via één van onze partners.</p>
     </section>
 
     <section class="content">
-        <form class="list-form">
-            <div class="textfield">
-                <input type="search" placeholder="zoek nu" class="textfield-input">
-                <span hidden=""></span>
-            </div>
 
-            <div>
-                <select name="filteren" class="form-filters">
-                    <option value="">Filter op Topic</option>
-                    <option value="Algemeen">Algemeen</option>
-                    <option value="DDAforgood">DDAforgood</option>
-                    <option value="Digitale-inclusie">Digitale Inclusie</option>
-                </select>
-            </div>
-        </form>
-
-        <div class="gridview">
-        {% for publication in publications %}
-            <article>
-                {% comment %} deze foto's werken nog niet {% endcomment %}
-                <img src=" {{  publication.photo }} " width="100px">
-                <h2> {{ publication.title }} </h2>
-        {% endfor %}
-            </article>
-        </div>
     </section>
 
 {% include 'views/footer.liquid' %}
