@@ -1,17 +1,119 @@
-/* Error: Undefined operation "21 * 100%".
- *    ,
- * 40 |         transform: translateX(#{$n - 1} * 100%);
- *    |                               ^^^^^^^^^^^^^^^^
- *    '
- *   styles\photopara.scss 40:31  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Undefined operation "21 * 100%".\a    \2577 \a 40 \2502          transform: translateX(#{$n - 1} * 100%);\d\a    \2502                                ^^^^^^^^^^^^^^^^\a    \2575 \a   styles\\photopara.scss 40:31  root stylesheet';
+.picture-container {
+  --d: 10s;
+  display: grid;
+  grid-template-columns: repeat(8, 8em);
+  gap: 40px;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, rgba(0, 0, 0, 0), #000 5% 95%, rgba(0, 0, 0, 0));
 }
+.picture-container img {
+  height: 8em;
+  padding: 3em;
+  border: var(--border);
+}
+
+.gallery > img {
+  grid-area: 1/1;
+  width: 100%;
+  animation: display var(--d) linear infinite;
+  object-fit: cover;
+  aspect-ratio: 1.2;
+}
+
+.picture-container > img:nth-child(2) {
+  animation-delay: calc(-1, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(3) {
+  animation-delay: calc(-2, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(4) {
+  animation-delay: calc(-3, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(5) {
+  animation-delay: calc(-4, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(6) {
+  animation-delay: calc(-5, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(7) {
+  animation-delay: calc(-6, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(8) {
+  animation-delay: calc(-7, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(9) {
+  animation-delay: calc(-8, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(10) {
+  animation-delay: calc(-9, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(11) {
+  animation-delay: calc(-10, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(12) {
+  animation-delay: calc(-11, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(13) {
+  animation-delay: calc(-12, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(14) {
+  animation-delay: calc(-13, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(15) {
+  animation-delay: calc(-14, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(16) {
+  animation-delay: calc(-15, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(17) {
+  animation-delay: calc(-16, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(18) {
+  animation-delay: calc(-17, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(19) {
+  animation-delay: calc(-18, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(20) {
+  animation-delay: calc(-19, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(21) {
+  animation-delay: calc(-20, 22 * var(--d));
+}
+
+.picture-container > img:nth-child(22) {
+  animation-delay: calc(-21, 22 * var(--d));
+}
+
+@keyframes display {
+  100%, 26% {
+    transform: translateX(-100%);
+  }
+  100%, 260.01% {
+    transform: translateX(2500%);
+  }
+}
+body {
+  background-color: red;
+}
+
+/*# sourceMappingURL=photopara.css.map */
