@@ -255,7 +255,7 @@ body {
         border: var(--border);
         width: 16em;
         height: 16em;
-        object-fit: cover;'
+        object-fit: cover;
         
         media (max-width: 1000px) {
             width: 8em;
